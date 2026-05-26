@@ -1,0 +1,41 @@
+name: Update News Feed
+
+on:
+  schedule:
+    # Run every 6 hours
+    - cron: '0 */6 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-feed:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Run RSS Scraper
+        run: node scripts/fetch_news.js
+
+      - name: Commit and Push Changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "github-actions[bot]"
+          git add public/news.json
+          if git diff --staged --quiet; then
+            echo "No new stories found."
+          else
+            git commit -m "chore(feed): automatically fetch and update latest news stories"
+            git push
+          fi
