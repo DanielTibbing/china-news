@@ -1,9 +1,10 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { useNews } from './hooks/useNews';
 import { Header } from './components/layout/Header';
 import { NewsDashboard } from './components/news/NewsDashboard';
 import { ParallelCoverage } from './components/news/ParallelCoverage';
 import { Newspaper } from 'lucide-react';
+import { useTheme } from 'china-common';
 
 export function App() {
   const {
@@ -31,33 +32,7 @@ export function App() {
     recordReading
   } = useNews();
 
-  // Theme synchronization engine
-  const [isDarkMode, setIsDarkMode] = useState<boolean>(() => {
-    const saved = localStorage.getItem('theme');
-    if (saved) return saved === 'dark';
-    return window.matchMedia('(prefers-color-scheme: dark)').matches;
-  });
-
-  useEffect(() => {
-    if (isDarkMode) {
-      document.documentElement.classList.add('dark');
-      localStorage.setItem('theme', 'dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-      localStorage.setItem('theme', 'light');
-    }
-  }, [isDarkMode]);
-
-  // Sync theme changes in real-time across other open tabs
-  useEffect(() => {
-    const handleStorageChange = (e: StorageEvent) => {
-      if (e.key === 'theme') {
-        setIsDarkMode(e.newValue === 'dark');
-      }
-    };
-    window.addEventListener('storage', handleStorageChange);
-    return () => window.removeEventListener('storage', handleStorageChange);
-  }, []);
+  const { isDarkMode, setIsDarkMode } = useTheme();
 
   const [compareArticle, setCompareArticle] = useState<any | null>(null);
 
