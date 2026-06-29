@@ -15238,6 +15238,20 @@
         "sourceName": "BBC 中文网"
       },
       {
+        "id": "bbc-chinese-https-www-bbc-com-zhongwen-articles-ckg8jkg3n4yo-trad-4",
+        "title": "北京「中國尊」遭輕型飛機撞擊：禁區管制、飛行員身份與動機引發三大疑點",
+        "link": "https://www.bbc.com/zhongwen/articles/ckg8jkg3n4yo/trad?at_medium=RSS&at_campaign=rss",
+        "publishDate": "2026-06-29",
+        "description": "在全中國空域管制最嚴格的北京中心地帶，這架「低、慢、小」飛機如何穿透重重防線？社交媒體流傳的飛行員身份與大廈業主中信集團又有何關聯？BBC中文梳理事件背後的空域禁區、飛行員身份與墜機動機三大疑點。",
+        "category": "Society",
+        "language": "Chinese",
+        "languageCode": "zh",
+        "flag": "🇨🇳",
+        "stance": "Western Press",
+        "sourceId": "bbc-chinese",
+        "sourceName": "BBC 中文网"
+      },
+      {
         "id": "bbc-chinese-https-www-bbc-com-zhongwen-articles-cgmdxmdkjvyo-trad-0",
         "title": "《超級少女》：DC工作室高層稱漫畫巨頭須重建影迷信任",
         "link": "https://www.bbc.com/zhongwen/articles/cgmdxmdkjvyo/trad?at_medium=RSS&at_campaign=rss",
@@ -16517,20 +16531,6 @@
         "link": "https://www.bbc.com/zhongwen/articles/c3wyd6l1wjno/trad?at_medium=RSS&at_campaign=rss",
         "publishDate": "2026-06-22",
         "description": "那是BBC記者洛德絲·赫萊迪亞（Lourdes Heredia）首次現場觀看足球比賽，而這場世界盃賽事恰好成為體壇史上最具爭議事件之一。",
-        "category": "Society",
-        "language": "Chinese",
-        "languageCode": "zh",
-        "flag": "🇨🇳",
-        "stance": "Western Press",
-        "sourceId": "bbc-chinese",
-        "sourceName": "BBC 中文网"
-      },
-      {
-        "id": "bbc-chinese-https-www-bbc-com-zhongwen-articles-c36yxg512p6o-trad-0",
-        "title": "價值2.5億美元的金礦——補水暫停廣告將成世界盃新常態？",
-        "link": "https://www.bbc.com/zhongwen/articles/c36yxg512p6o/trad?at_medium=RSS&at_campaign=rss",
-        "publishDate": "2026-06-22",
-        "description": "BBC體育部剖析補水暫停時段廣告在世界各地如何操作，以及這能將對足球的未來帶來甚麼程度的影響。",
         "category": "Society",
         "language": "Chinese",
         "languageCode": "zh",
